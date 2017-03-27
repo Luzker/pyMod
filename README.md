@@ -6,7 +6,7 @@ You can use fields or function in any time by import the ModularObj instance.
 ```
 Example:
 [file a]
-    \@MudularObj
+    @MudularObj
     class my-class: 
         def test(self):
             print "hello world!"
@@ -21,7 +21,7 @@ The function must require at least self as parameter.
 ```
 [file c]
     from a import my-class
-    \@my-class
+    @my-class
     def test1(self):
         print "i'm a my-class function!"
     my-class.test1()
@@ -32,7 +32,7 @@ name, with the name of ModulareObj instance.
 ```
 [file c]
     [...]
-    \@my-class
+    @my-class
     def test1(self): 
         print "override!"
     my-class.test1()
