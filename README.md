@@ -91,9 +91,25 @@ attribute of my-class-2
 band can execute a function every event or every [sec] seconds:
 
 * for binding a function by time you must provide: 
-function reference, how many second must be wait to every execution,
-and a dictionary of key arguments  
+function reference, how many second must be wait befor every execution,
+and a dictionary of key arguments. the binder will call the function passing
+all the key argument in kargs.
+```
+bind.time(func,sec,kargs)
+```
 
-*bind a function by event name you must provide: 
-function reference, and the event name. 
-when the event occurs the call the function with event arguments. 
+* bind a function by event name you must provide: 
+the event name and the function reference. the function will be call when 
+an event witch has event.name equals to eventName is raised. 
+when the event occurs the bind call the function with event arguments. 
+```
+bind.event(eventName,func)
+```
+
+the event is used by the raiseEvent method to load a new event, the event will 
+be caught by the binder. the binder call every function binded with that specifical
+event.name and pass the arguments stored in event.kargs
+```
+e = event(eventName, kargs)
+raiseEvent(e)
+```
