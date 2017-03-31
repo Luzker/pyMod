@@ -1,4 +1,4 @@
-# pyMod
+# pyModular
 This software provide a way to make static class/object in Python.
 Class decorated with ModularObj are initialized and replaced with the instance.
 You can use fields or function in any time by import the ModularObj instance.
