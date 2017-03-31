@@ -73,3 +73,27 @@ Everything returned by a function call is stored in a tuple.
 In this tuple we can find preFunc returns, function Returns and postFunc returns. 
 You won't find a None type returned by a function calling: 
 if nothing is returned you will find an empty tuple.
+
+replace self attribute. this version of ModularObj make an object by "join" 
+two or more instanced object.
+the obj will be destroyed after function execution.
+```
+[file d]
+    @my-class-1
+    @my-class-2
+    def test(self): 
+        pass
+```
+
+in this function self has all attribute of my-class-1 and all 
+attribute of my-class-2
+
+band can execute a function every event or every [sec] seconds:
+
+*for binding a function by time you must provide: 
+function reference, how many second must be wait to every execution,
+and a dictionary of key arguments  
+
+*bind a function by event name you must provide: 
+function reference, and the event name. 
+when the event occurs the call the function with event arguments. 
