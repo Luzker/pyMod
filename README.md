@@ -52,6 +52,10 @@ my-class.enableAll()
 my-class.disable(func_name)
 my-class.disableAll()
 ```
+you can make the isance immutable by call mkImmutable function. when an istance is immutable you cannot add, override, disable or enable function and you cannot add or modify attributes. you can only use attribute or functions.
+```
+my-class.mkImmutable()
+```
 
 Every function, except buildin's, are wrapped in another function: 
 you can override preFunc and postFunc to do specific task before and after a 
