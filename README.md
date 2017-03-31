@@ -52,12 +52,12 @@ my-class.enableAll()
 my-class.disable(func_name)
 my-class.disableAll()
 ```
-you can make the isance immutable by call mkImmutable function. when an istance is immutable you cannot add, override, disable or enable function and you cannot add or modify attributes. you can only use attribute or functions.
+you can make the instance immutable by call build-in mkImmutable function. when an istance is immutable you cannot add, override, disable or enable function and you cannot add or modify attributes. you can only use attribute or functions.
 ```
 my-class.mkImmutable()
 ```
 
-Every function, except buildin's, are wrapped in another function: 
+Every function, except build-in's, are wrapped in another function: 
 you can override preFunc and postFunc to do specific task before and after a 
 function calling.
 PreFunc takes: self, funcName and all the function parameter.
@@ -78,9 +78,10 @@ In this tuple we can find preFunc returns, function Returns and postFunc returns
 You won't find a None type returned by a function calling: 
 if nothing is returned you will find an empty tuple.
 
-replace self attribute. this version of ModularObj make an object by "join" 
+!!replace self attribute. 
+in this version of ModularObj you will make an object by "join" 
 two or more instanced object.
-the obj will be destroyed after function execution.
+this obj will be destroyed after function execution.
 ```
 [file d]
     @my-class-1
@@ -92,12 +93,12 @@ the obj will be destroyed after function execution.
 in this function self has all attribute of my-class-1 and all 
 attribute of my-class-2
 
-band can execute a function every event or every [sec] seconds:
+bind can execute a function every event or every [sec] seconds:
 
 * for binding a function by time you must provide: 
 function reference, how many second must be wait befor every execution,
 and a dictionary of key arguments. the binder will call the function passing
-all the key argument in kargs.
+all the key argument stored in kargs.
 ```
 bind.time(func,sec,kargs)
 ```
