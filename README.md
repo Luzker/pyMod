@@ -78,9 +78,9 @@ In this tuple we can find preFunc returns, function Returns and postFunc returns
 You won't find a None type returned by a function calling: 
 if nothing is returned you will find an empty tuple.
 
-!!replace self attribute. 
-in this version of ModularObj you will make an object by "join" 
-two or more instanced object.
+replace self attribute in function call. 
+in this version of ModularObj self is an object made by "join" 
+two or more instanced class.
 this obj will be destroyed after function execution.
 ```
 [file d]
