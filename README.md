@@ -90,7 +90,7 @@ attribute of my-class-2
 
 band can execute a function every event or every [sec] seconds:
 
-*for binding a function by time you must provide: 
+* for binding a function by time you must provide: 
 function reference, how many second must be wait to every execution,
 and a dictionary of key arguments  
 
